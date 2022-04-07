@@ -11,12 +11,12 @@ public class Calculator {
         this.b = b;
     }
 
-    public int add () {
-        return resultAdd = a+b;
+    public void add () {
+        resultAdd = a+b;
     }
 
-    public int substract () {
-        return resultSubstract = a-b;
+    public void substract () {
+        resultSubstract = a-b;
     }
 
     public int getResultAdd() {
