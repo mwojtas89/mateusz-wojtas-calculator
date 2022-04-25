@@ -22,9 +22,11 @@ public class WorldTestSuite {
         america.addCountry(canada);
         //When
         World world = new World();
+        world.addContinent(america);
+        world.addContinent(europe);
         BigDecimal test = world.getPeopleQuantity();
         //Then
-        BigDecimal expected = new BigDecimal("211111110903703703670");
+        BigDecimal expected = new BigDecimal("122103890");
         assertEquals(expected, test);
     }
 }
