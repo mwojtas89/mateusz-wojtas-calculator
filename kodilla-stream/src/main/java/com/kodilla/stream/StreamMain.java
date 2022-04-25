@@ -1,6 +1,7 @@
 package com.kodilla.stream;
 
 
+import com.kodilla.stream.array.ArrayOperations;
 import com.kodilla.stream.beautifier.PoemBeautifier;
 import com.kodilla.stream.book.Book;
 import com.kodilla.stream.book.BookDirectory;
@@ -49,6 +50,14 @@ public class StreamMain {
                 .map(entry -> entry.getKey() + " : " + entry.getValue())
                 .forEach(System.out::println);
 
+        int[] inTo = {1,2,33,4,5,6};
+        int[] inTo1 = {2,3,4,5,6,7,9};
+
+        double test =0;
+        double test1 =0;
+        test = ArrayOperations.getAverage(inTo);
+        test1 = ArrayOperations.getAverage(inTo1);
+        System.out.println(test + " " + test1);
     }
 
 
