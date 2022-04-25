@@ -2,7 +2,6 @@ package com.kodilla.testing;
 
 import com.kodilla.testing.calc.Calculator;
 import com.kodilla.testing.collection.OddNumbersExterminator;
-import com.kodilla.testing.user.SimpleUser;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -18,7 +17,7 @@ public class TestingMain {
         List<Integer> result;
 
         for (int i = 0; i<10; i++) {
-            numbers.add(a.nextInt(0,200));
+            numbers.add(a.nextInt(200));
         }
 
         OddNumbersExterminator examin = new OddNumbersExterminator();
