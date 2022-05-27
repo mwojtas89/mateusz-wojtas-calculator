@@ -2,4 +2,7 @@ rootProject.name = 'kodilla-course-calc'
 include 'kodilla-testing'
 include 'kodilla-stream'
 include 'kodilla-exception'
+include 'kodilla-game-snake'
+include 'kodilla-text-game'
+include 'kodilla-good-patterns'
 
