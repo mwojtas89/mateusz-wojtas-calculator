@@ -9,10 +9,7 @@ public class StreamMovies {
 
         String print = movies.getMovies().entrySet().stream()
                 .flatMap(tl->tl.getValue().stream())
-                .map(a-> a = "!" + a)
-                .collect(Collectors.joining());
-
-        print = print.replaceFirst("!","");
+                .collect(Collectors.joining("!"));
         System.out.println(print);
     }
 }
