@@ -1,6 +1,5 @@
 package com.kodilla.spring;
 
-import com.kodilla.spring.forum.ForumUser;
 import com.kodilla.spring.shape.Circle;
 import com.kodilla.spring.shape.Shape;
 import com.kodilla.spring.shape.Square;
@@ -44,17 +43,17 @@ class KodillaSpringApplicationTests {
     }
 
     @Test
-    void testForumUser() {
+    void testShapeLoadedIntoContainer() {
         //Given
         ApplicationContext context =
-                new AnnotationConfigApplicationContext("com.kodilla.spring.forum");
-        ForumUser forumUser = context.getBean(ForumUser.class);
+                new AnnotationConfigApplicationContext("com.kodilla.spring");
+        Shape shape = (Shape)context.getBean("chosenShape");
 
         //When
-        String name = forumUser.userName;
+        String name = shape.getShapeName();
 
         //Then
-        assertEquals("John Smith", name);
+        System.out.println("Chosen shape says: " + name);
     }
 
     @Test
