@@ -6,20 +6,23 @@ public class RunGame {
         System.out.println("Zasady gry: \n 1 - kamien\n 2 - nozye\n 3 - paier\n x - koniec gry\n n - nowa gra" );
         System.out.println("Podaj po ilu wygranych chcesz zakonczyc: ");
         UserDialogs ud = new UserDialogs();
-        int gameQuantity = ud.userDialogsInt();
+        //int gameQuantity = ud.userDialogsInt();
         int score;
-        while(gameQuantity>0) {
+        //while (metoda która będzie przyjmowała game Quantity i wracała boolean)
+        //dodać obiekt game
+        //dodać ENUM do userdialogs
+        //userdialogs można zrobić overloding of metod
+
+
+
+
+        //while(gameQuantity>0) {
             Random rd = new Random();
             System.out.println("Wybierz kamien/nozyce/papier : ");
-            int player1 = ud.userDialogsInt();
+            //int player1 = ud.userDialogsInt();
             int player2 = rd.nextInt(3);
-            if (player1 > player2) {
+            //if (player1 > player2) {
 
             }
 
         }
-    }
-
-
-
-}
