@@ -24,6 +24,5 @@ public class BoardTestSuite {
         toDoList.print();
         inProgressList.print();
         doneList.print();
-
     }
 }
