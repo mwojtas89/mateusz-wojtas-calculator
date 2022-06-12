@@ -3,25 +3,23 @@ package com.kodilla.spring.portfolio;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import java.util.List;
-
 @Configuration
 public class BoardConfig {
     @Bean
-    public TaskList toDoList(List<String> task) {
-        return new TaskList(task);
+    public TaskList toDoList() {
+        return new TaskList();
     }
     @Bean
-    public TaskList inProgressList (List<String> task) {
-        return new TaskList(task);
+    public TaskList inProgressList () {
+        return new TaskList();
     }
     @Bean
-    public TaskList doneList (List<String> task) {
-        return new TaskList(task);
+    public TaskList doneList () {
+        return new TaskList();
     }
     @Bean
-    public Board board(List<String> task) {
-        return new Board(toDoList(task), inProgressList(task), doneList(task));
+    public Board board() {
+        return new Board();
     }
 
 }

@@ -16,12 +16,14 @@ public class BoardTestSuite {
         TaskList toDoList = context.getBean("toDoList",TaskList.class);
         toDoList.tasks.add("abc");
         TaskList inProgressList = context.getBean("inProgressList",TaskList.class);
-        toDoList.tasks.add("abc2");
+        inProgressList.tasks.add("abc2");
         TaskList doneList = context.getBean("doneList",TaskList.class);
-        toDoList.tasks.add("abc3");
+        doneList.tasks.add("abc3");
 
         //Then
         toDoList.print();
+        inProgressList.print();
+        doneList.print();
 
     }
 }
