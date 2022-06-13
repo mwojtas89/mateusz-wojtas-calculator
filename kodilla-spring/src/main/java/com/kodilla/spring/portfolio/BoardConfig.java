@@ -5,6 +5,12 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class BoardConfig {
+
+    @Bean
+    public Board board(TaskList toDoList, TaskList inProgressList, TaskList doneList) {
+        return new Board(toDoList, inProgressList, doneList);
+    }
+
     @Bean
     public TaskList toDoList() {
         return new TaskList();
@@ -17,10 +23,4 @@ public class BoardConfig {
     public TaskList doneList () {
         return new TaskList();
     }
-
-    @Bean
-    public Board board() {
-        return new Board(toDoList(), inProgressList(), doneList());
-    }
-
 }
