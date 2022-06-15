@@ -54,7 +54,7 @@ public class CollectionTestSuite {
         List<Integer> test = new ArrayList<>();
         OddNumbersExterminator examin = new OddNumbersExterminator();
         for (int i = 0; i < 10; i++) {
-            numbers.add(a.nextInt(0, 200));
+            numbers.add(a.nextInt( 200));
         }
         //When
         OddNumbersExterminator examin1 = new OddNumbersExterminator();
