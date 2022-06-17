@@ -6,16 +6,32 @@ public class StatisticsCalculation {
     public StatisticsCalculation(Statistics statistics) {
         this.statistics = statistics;
     }
-    int userQuantity;
-    int postQuantity;
-    int comentQuantity;
-    double avragePostToUser;
-    double avrageCommentToUser;
-    double avrageComentToPost;
+    private int userQuantity;
+    private int postQuantity;
+    private int comentQuantity;
+    private double avragePostToUser;
+    private double avrageCommentToUser;
+    private double avrageComentToPost;
 
-    public void calculateAdvStatistics (Statistics statistics) {
+    public double getAvragePostToUser() {
+        return avragePostToUser;
+    }
 
+    public double getAvrageCommentToUser() {
+        return avrageCommentToUser;
+    }
 
+    public double getAvrageComentToPost() {
+        return avrageComentToPost;
+    }
+
+    public void calculateAdvStatistics () {
+        userQuantity = statistics.usersNames().size();
+        postQuantity = statistics.postsCount();
+        comentQuantity = statistics.commentsCount();
+        avragePostToUser = postQuantity/userQuantity;
+        avrageComentToPost = comentQuantity/postQuantity;
+        avrageCommentToUser = comentQuantity/userQuantity;
     }
     public void printStat () {
         System.out.println(userQuantity + " " + postQuantity + " " + comentQuantity + " " + avragePostToUser + " " +
